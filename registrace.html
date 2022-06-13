@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title> Registrace</title>
+    <link rel="stylesheet" href="styly.css">
+</head>
+
+<body class="register">
+
+    <h1 align="center"> Registrace na promítání</h1>
+
+
+    <form>
+        <div class="date">
+            Vyberte datum:
+            <input type="date" required>
+        </div>
+       <div class="movie-choose">
+        Vyberte film:
+        <select name="Filmy" required>
+            <option value="Lavi">Vyšehrad FYLM</option>
+            <option value="Doctor">Doctor Strange v mnohovesmíru šílenství</option>
+            <option value="saw">The Saw 2</option>
+            <option value="FaF">Rychle a zběsile 9</option>
+            <option value="Nemo">Hledá se Nemo</option>
+            <option value="3D">Herkules 3D</option>
+            <option value="HP">Fantastická zvířata: Brumbálova tajemství</option>
+            <option value="drak">Jak vycvičit draka 3</option>
+            <option value="lex">Saxána a Lexikon kouzel</option>
+        </select>
+       </div>
+
+            <div class="adult">
+                Dospělý:
+                <input type="number" min="0" value="2" required>
+            </div>
+            <div class="student">
+                Student:
+                <input type="number" min="0" value="0" required>
+            </div>
+            <div class="kid">
+                Dítě:
+                <input type="number" min="0" value="0" required>
+            </div>
+
+        <div class="mail">
+                    Email:
+                    <input type="email" maxlength="30" placeholder="petrnovotny@gmail.com" required>
+        </div>
+        
+        <div class="phone">
+            Telefon:
+            <input type="tel" placeholder="123 456 789" pattern="[2-9]{3}[0-9]{3}[0-9]{3}" required>
+        </div>
+        
+        
+        <input type="reset">
+
+        <input type="submit">
+
+    </form>
+
+                <a href="zaverecka.html" class="reg-back">
+                Zpět
+                </a>
+
+
+</body>
+
+
+
+
+</html>
