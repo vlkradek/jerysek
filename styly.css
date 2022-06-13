@@ -1,0 +1,284 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    /* vynulovani zakladnich parametru */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.row{
+    width: 80%;
+    margin: 0 auto;
+}
+header{
+    height: 100vh; /* vh = vyska displeje */
+    width: 100vw;
+
+    /* nastaveni pozadi, ktere bude na scrollovani na stejne pozici */
+    background: url('https://th.bing.com/th/id/R.8510846951ab0ca566b24bbbc169c9a5?rik=wf2tDDSqd%2bNxsw&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.intro-text{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+}
+.intro-text h1{
+    color: #fff;
+    font-size: 60px;
+}
+.intro-text p{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+th,
+td {
+    border: 2px solid black;
+}
+
+
+/* dny budou vedle sebe */
+.program{
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+.day{
+    flex-basis: 20%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.568);
+    margin: 20px;
+    padding: 30px 20px;
+}
+.day h4{
+    text-align: center;
+    color: rgb(85, 85, 85);
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+li{
+    list-style-type: none;
+}
+li a{
+    position: relative;
+}
+
+/******** Kdyz najedete mysi na nazvy filmu, tak se ten nazev podtrhne a po kliknuti se presmerujete na dany film ******/
+
+/* specialni "pseudoclass", udela to podtrhnuti */
+li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    height: 1px;
+    width: 0%;
+    transition: 0.5s;
+}
+li a:hover::after {
+    width: 100%;
+}
+ul h2{
+    text-align: center;
+
+    padding-top: 25px;
+    color: rgb(44, 44, 44);
+    font-size: 30px;
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.price-list{
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('popcorn.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 50px 0;
+    padding: 100px 0;
+}
+.price-list h5{
+    color: #fff;
+    font-size: 40px;
+}
+.price-list a{
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 24px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.price-list a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.movie{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.568);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+.movie h3{
+    font-size: 30px;
+}
+.time{
+    display: flex;
+    align-items: center;
+}
+.time i{
+    padding-right: 5px;
+    font-size: 20px;
+}
+.movie p{
+    padding-top: 10px;
+}
+
+
+.pricing{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 50px;
+}
+.price-title{
+    margin-top: 20px;
+    font-size: 40px;
+    color: rgb(70, 70, 70);
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    display: inline;
+    border-radius: 10px;
+}
+
+/* prida to pozadi */
+.price-body{
+    background: url('stanek.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(34, 34, 34);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.price-body table{
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 30px;
+}
+.price-body table td{
+    font-weight: 500;
+}
+.back{
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+.back i{
+    padding-right: 10px;
+}
+.register{
+    background: url('ticket.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* upraveni textovych poli */
+.register input,
+.register select{
+    padding: 10px 20px;
+    border: 2px solid navy;
+    border-radius: 10px;
+    background-color: rgba(130, 180, 255, 0.486);
+    outline: none;
+}
+
+.register h1{
+    margin: 20px 0;
+    color: #fff;
+}
+
+.register form{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.568);
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 40vw;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+form div{
+    margin-bottom: 15px;
+}
+/* nastaveni tlacitka */
+.reg-back {
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: 0.5s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* kdyz se mysi najede na tlacitko, zmeni se barva */
+.reg-back:hover {
+    background-color: #fff;
+    color: #000;
+}
+.header-btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    padding: 10px 15px;
+    border: 1px solid rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.header-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
